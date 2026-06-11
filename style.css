@@ -1,0 +1,134 @@
+:root {
+    --primary-color: #2e7d32; /* Verde Agro */
+    --secondary-color: #81c784; /* Verde Claro */
+    --accent-color: #f57c00; /* Laranja Sustentabilidade/Terra */
+    --bg-color: #e8f5e9; /* Fundo suave */
+    --text-color: #1b5e20;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.quiz-container {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    border-top: 8px solid var(--primary-color);
+}
+
+.screen h1 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.screen h2 {
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.screen p {
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#question-text {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.btn-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #1b5e20;
+    transform: translateY(-2px);
+}
+
+.btn-answer {
+    background-color: #f1f8e9;
+    color: #333;
+    border: 2px solid var(--secondary-color);
+    text-align: left;
+}
+
+.btn-answer:hover {
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
+
+/* Classes de validação */
+.correct {
+    background-color: #4caf50 !important;
+    color: white !important;
+    border-color: #388e3c !important;
+}
+
+.wrong {
+    background-color: #f44336 !important;
+    color: white !important;
+    border-color: #d32f2f !important;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+.hide {
+    display: none !important;
+}
+
+#timer {
+    background-color: #fff3e0;
+    padding: 4px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+}
